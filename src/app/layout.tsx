@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s · BREAKLAB Gazette",
   },
   description:
-    "Boletín público oficial de BREAKLAB: laboratorio universitario de resiliencia y fallo de software. Documentamos sesiones, errores resueltos y lecciones aprendidas.",
+    "Laboratorio de Resiliencia y Fallo de Software. Reclutamiento activo: construimos ingenieros que no temen al caos, sino que lo dominan.",
 };
 
 export default function RootLayout({

@@ -5,7 +5,7 @@ import { getAllArticles } from "@/lib/articles";
 export const metadata: Metadata = {
   title: "La Gaceta",
   description:
-    "Archivo público de sesiones, errores resueltos y lecciones aprendidas de BREAKLAB.",
+    "Crónicas de caos controlado. Cada artículo documenta un fallo, una lección y una victoria de la comunidad BREAKLAB.",
 };
 
 export default function GacetaPage() {
@@ -20,20 +20,15 @@ export default function GacetaPage() {
         La Gaceta
       </h1>
       <p className="reveal reveal-delay-2 mt-4 max-w-2xl text-breaklab-muted">
-        Cada archivo Markdown en{" "}
-        <code className="font-mono text-breaklab-blue">/content</code> se
-        publica aquí. Sesiones, fallos y aprendizajes del laboratorio.
+        Crónicas de caos controlado. Cada artículo documenta un fallo, una
+        lección y una victoria de la comunidad BREAKLAB.
       </p>
 
       {articles.length === 0 ? (
         <div className="mt-12 rounded-2xl border border-dashed border-breaklab-border bg-breaklab-card/40 p-12 text-center">
           <p className="text-lg font-medium text-breaklab-text">
-            La Gaceta está en silencio.
-          </p>
-          <p className="mt-2 text-sm text-breaklab-muted">
-            Aún no hay artículos. Agrega un archivo{" "}
-            <code className="font-mono text-breaklab-blue">.md</code> en la
-            carpeta de contenido para publicarlo automáticamente.
+            📭 Aún no hay artículos publicados. La primera edición estará
+            disponible después de la Sesión 1.
           </p>
         </div>
       ) : (

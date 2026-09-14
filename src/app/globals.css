@@ -8,6 +8,10 @@
   color-scheme: dark;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   @apply bg-breaklab-bg text-breaklab-text font-sans antialiased;

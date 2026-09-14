@@ -61,7 +61,7 @@ Este catálogo será el **legado intelectual** de BREAKLAB para la universidad. 
 
 Para entrar a BREAKLAB, aceptas tres reglas innegociables:
 
-1. **Respeto Radical**: Cero tolerancias a la arrogancia intelectual. En BREAKLAB no hay "preguntas estúpidas", hay diagnósticos en proceso.
+1. **Respeto Radical**: Cero tolerancia a la arrogancia intelectual. En BREAKLAB no hay "preguntas estúpidas", hay diagnósticos en proceso.
 2. **Colaboración sobre el Ego**: El objetivo no es demostrar quién sabe más, sino lograr que el sistema vuelva a estar en línea. Se aplaude a quien pide ayuda a tiempo.
 3. **Compartir sin Vergüenza**: Ocultar un error es el único fracaso real. Mostrar un código que falló espectacularmente es el primer paso para la sesión de análisis.
 
