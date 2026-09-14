@@ -12,14 +12,14 @@ export default function GacetaPage() {
   const articles = getAllArticles();
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-      <p className="font-mono text-xs uppercase tracking-[0.2em] text-breaklab-blue">
+    <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <p className="reveal font-mono text-xs uppercase tracking-[0.2em] text-breaklab-blue">
         Boletín oficial
       </p>
-      <h1 className="mt-3 text-4xl font-extrabold tracking-tight sm:text-5xl">
+      <h1 className="reveal reveal-delay-1 mt-3 text-4xl font-extrabold tracking-tight sm:text-5xl">
         La Gaceta
       </h1>
-      <p className="mt-4 max-w-2xl text-breaklab-muted">
+      <p className="reveal reveal-delay-2 mt-4 max-w-2xl text-breaklab-muted">
         Cada archivo Markdown en{" "}
         <code className="font-mono text-breaklab-blue">/content</code> se
         publica aquí. Sesiones, fallos y aprendizajes del laboratorio.
@@ -38,8 +38,8 @@ export default function GacetaPage() {
         </div>
       ) : (
         <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {articles.map((article) => (
-            <ArticleCard key={article.slug} article={article} />
+          {articles.map((article, index) => (
+            <ArticleCard key={article.slug} article={article} index={index} />
           ))}
         </div>
       )}

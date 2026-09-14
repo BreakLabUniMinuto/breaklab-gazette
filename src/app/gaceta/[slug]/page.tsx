@@ -44,15 +44,15 @@ export default async function ArticlePage({ params }: PageProps) {
   }
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+    <article className="relative mx-auto max-w-3xl px-4 py-16 sm:px-6">
       <Link
         href="/gaceta"
-        className="inline-flex items-center gap-2 text-sm text-breaklab-muted transition-colors hover:text-breaklab-blue"
+        className="reveal inline-flex items-center gap-2 text-sm text-breaklab-muted transition-colors hover:text-breaklab-blue"
       >
         ← Volver
       </Link>
 
-      <header className="mt-8 border-b border-breaklab-border pb-8">
+      <header className="reveal reveal-delay-1 mt-8 border-b border-breaklab-border pb-8">
         <div className="flex flex-wrap items-center gap-3">
           <time className="font-mono text-xs uppercase tracking-wide text-breaklab-muted">
             {formatDate(article.date)}
@@ -78,7 +78,7 @@ export default async function ArticlePage({ params }: PageProps) {
       </header>
 
       <div
-        className="prose-breaklab pt-8"
+        className="prose-breaklab reveal reveal-delay-2 pt-8"
         dangerouslySetInnerHTML={{ __html: article.contentHtml }}
       />
     </article>

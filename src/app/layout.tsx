@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LabBackdrop from "@/components/LabBackdrop";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -19,9 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className="flex min-h-screen flex-col">
+      <body className="relative flex min-h-screen flex-col overflow-x-hidden">
+        <LabBackdrop />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="relative z-10 flex-1">{children}</main>
         <Footer />
       </body>
     </html>
