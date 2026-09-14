@@ -3,13 +3,6 @@ import GlitchTitle from "@/components/GlitchTitle";
 import ArticleCard from "@/components/ArticleCard";
 import { getAllArticles } from "@/lib/articles";
 
-const stats = [
-  { value: "38+", label: "Estudiantes Inscritos" },
-  { value: "5", label: "Sesiones MVP Programadas" },
-  { value: "∞", label: "Errores por Romper" },
-  { value: "0", label: "Sesiones Completadas", hint: "en preparación" },
-];
-
 const milestones = [
   {
     state: "done",
@@ -78,35 +71,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="reveal reveal-delay-4 mx-auto max-w-6xl px-4 sm:px-6">
-        <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-breaklab-blue">
-          Estado actual
-        </p>
-        <div className="grid grid-cols-2 gap-4 rounded-2xl border border-breaklab-border bg-breaklab-card/50 p-4 sm:grid-cols-4 sm:p-6">
-          {stats.map((stat) => (
-            <div key={stat.label} className="px-2 py-3 text-center">
-              <p className="font-mono text-3xl font-semibold text-breaklab-text sm:text-4xl">
-                {stat.value}
-              </p>
-              <p className="mt-2 text-xs uppercase tracking-wider text-breaklab-muted">
-                {stat.label}
-              </p>
-              {stat.hint ? (
-                <p className="mt-1 font-mono text-[10px] uppercase tracking-wider text-breaklab-orange">
-                  {stat.hint}
-                </p>
-              ) : null}
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-breaklab-orange">
           Control del proceso
         </p>
         <h2 className="mt-2 text-3xl font-bold tracking-tight">
-          Fase Actual: Preparación y Reclutamiento
+          Preparación y reclutamiento
         </h2>
 
         <div className="mt-8 overflow-hidden rounded-2xl border border-breaklab-border bg-breaklab-card/80">
