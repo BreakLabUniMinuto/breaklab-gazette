@@ -26,9 +26,11 @@ const milestones = [
   },
 ];
 
+const ENROLLMENT_FORM_URL =
+  "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=64W6sVOiZ0Se6NT47U3zAELXOEuc8i1LlVf4IZMQpsVUNjRHSTdNNzBESDBZUUZPRTdSQVRIRDlXVy4u";
+
 const requirements = [
   "Estudiante activo del programa de Ingeniería de Software",
-  "Disponibilidad quincenal (2 horas por sesión)",
   "Cuenta de GitHub activa",
   "Mentalidad de aprendizaje y colaboración",
 ];
@@ -183,10 +185,12 @@ export default function HomePage() {
             ))}
           </ul>
           <a
-            href="mailto:coordinador@universidad.edu"
+            href={ENROLLMENT_FORM_URL}
+            target="_blank"
+            rel="noreferrer"
             className="btn-shimmer mt-8 inline-flex rounded-full bg-gradient-to-r from-breaklab-blue to-breaklab-pink px-6 py-3 text-sm font-semibold text-breaklab-bg shadow-[0_0_28px_rgba(56,189,248,0.25)] transition hover:scale-[1.03]"
           >
-            Contactar al Coordinador
+            Inscribirse
           </a>
         </div>
       </section>
