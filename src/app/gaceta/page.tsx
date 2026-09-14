@@ -1,0 +1,48 @@
+import type { Metadata } from "next";
+import ArticleCard from "@/components/ArticleCard";
+import { getAllArticles } from "@/lib/articles";
+
+export const metadata: Metadata = {
+  title: "La Gaceta",
+  description:
+    "Archivo público de sesiones, errores resueltos y lecciones aprendidas de BREAKLAB.",
+};
+
+export default function GacetaPage() {
+  const articles = getAllArticles();
+
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <p className="font-mono text-xs uppercase tracking-[0.2em] text-breaklab-blue">
+        Boletín oficial
+      </p>
+      <h1 className="mt-3 text-4xl font-extrabold tracking-tight sm:text-5xl">
+        La Gaceta
+      </h1>
+      <p className="mt-4 max-w-2xl text-breaklab-muted">
+        Cada archivo Markdown en{" "}
+        <code className="font-mono text-breaklab-blue">/content</code> se
+        publica aquí. Sesiones, fallos y aprendizajes del laboratorio.
+      </p>
+
+      {articles.length === 0 ? (
+        <div className="mt-12 rounded-2xl border border-dashed border-breaklab-border bg-breaklab-card/40 p-12 text-center">
+          <p className="text-lg font-medium text-breaklab-text">
+            La Gaceta está en silencio.
+          </p>
+          <p className="mt-2 text-sm text-breaklab-muted">
+            Aún no hay artículos. Agrega un archivo{" "}
+            <code className="font-mono text-breaklab-blue">.md</code> en la
+            carpeta de contenido para publicarlo automáticamente.
+          </p>
+        </div>
+      ) : (
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          {articles.map((article) => (
+            <ArticleCard key={article.slug} article={article} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

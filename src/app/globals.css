@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  @apply bg-breaklab-bg text-breaklab-text font-sans antialiased;
+}
+
+.prose-breaklab {
+  @apply max-w-none text-breaklab-muted leading-relaxed;
+}
+
+.prose-breaklab h1 {
+  @apply mt-10 mb-4 font-sans text-3xl font-bold tracking-tight text-breaklab-text sm:text-4xl;
+}
+
+.prose-breaklab h2 {
+  @apply mt-12 mb-4 font-sans text-2xl font-semibold tracking-tight text-breaklab-text;
+}
+
+.prose-breaklab h3 {
+  @apply mt-8 mb-3 font-sans text-xl font-semibold text-breaklab-text;
+}
+
+.prose-breaklab p {
+  @apply mb-5 text-base leading-7;
+}
+
+.prose-breaklab ul {
+  @apply mb-6 ml-5 list-disc space-y-2;
+}
+
+.prose-breaklab ol {
+  @apply mb-6 ml-5 list-decimal space-y-2;
+}
+
+.prose-breaklab li {
+  @apply text-base leading-7;
+}
+
+.prose-breaklab strong {
+  @apply font-semibold text-breaklab-text;
+}
+
+.prose-breaklab a {
+  @apply text-breaklab-blue underline decoration-breaklab-blue/40 underline-offset-4 transition-colors hover:text-breaklab-pink hover:decoration-breaklab-pink/50;
+}
+
+.prose-breaklab blockquote {
+  @apply my-8 border-l-2 border-breaklab-pink bg-breaklab-card/60 px-5 py-4 italic text-breaklab-text;
+}
+
+.prose-breaklab code {
+  @apply rounded bg-breaklab-card px-1.5 py-0.5 font-mono text-sm text-breaklab-blue;
+}
+
+.prose-breaklab pre {
+  @apply my-6 overflow-x-auto rounded-xl border border-breaklab-border bg-[#080c14] p-4;
+}
+
+.prose-breaklab pre code {
+  @apply bg-transparent p-0 text-breaklab-text;
+}
+
+.prose-breaklab hr {
+  @apply my-10 border-breaklab-border;
+}
